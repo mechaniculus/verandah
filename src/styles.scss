@@ -1,0 +1,263 @@
+/* You can add global styles to this file, and also import other style files */
+$orange: #f39016;
+@import '../src/assets/styles/index.scss';
+@import '~angular-tree-component/dist/angular-tree-component.css';
+
+.slide-figure{
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.headerBg {
+    background-color: transparent !important;
+    -webkit-transition: all 1s ease-in-out;
+    -moz-transition: all 1s ease-in-out;
+    -o-transition: all 1s ease-in-out;
+    transition: all 1s ease-in-out;
+    .logo{
+        width: 200px;
+        height: auto !important;
+        -webkit-transition: all 1s ease-in-out;
+        -moz-transition: all 1s ease-in-out;
+        -o-transition: all 1s ease-in-out;
+        transition: all 1s ease-in-out;
+    }
+}
+.nav-tabset:not(.disable-style){
+  display: block;
+
+  .nav-tab.active {
+     border-color:$orange;
+     font-weight: 700;
+     color:$orange;
+     margin: 0 15px;
+     padding: 15px 0 !important;
+ }
+
+ .nav-tab{
+   margin: 0 15px;
+   padding: 15px 0 !important;
+   text-transform: uppercase;
+   display: inline-block;
+ }
+}
+
+a{
+  color: #000;
+  &:hover{
+    color: $orange;
+  }
+}
+
+.fp-slidesNav.fp-bottom{
+    display: none;
+}
+
+.carousel .carousel-control-prev-icon, .carousel .carousel-control-next-icon {
+    width: 72px !important;
+    height: 72px !important;
+}
+
+
+.back-pat-right{
+    background-image: url('src/assets/images/art-1.svg');
+    width: 100%;
+    height: 200px;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: top;
+    position: absolute;
+    bottom: 0;
+}
+
+ngb-carousel {
+    //   width: inherit;
+    //   height: inherit;
+    width: 100%;
+    height: 100%;
+  }
+
+
+  .carousel-inner {
+    overflow: visible;
+  }
+
+  .carousel-item {
+    display: flex !important;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 1.2s ease-in-out, visibility 1.2s;
+    z-index: -1;
+    position: absolute;
+  }
+
+  .carousel-item.active {
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 1.2s ease-in-out, visibility 1.2s;
+    z-index: 10;
+  }
+
+  .carousel-control-prev {
+    z-index: 20;
+  }
+
+
+  .carousel-control-next {
+    z-index: 20;
+  }
+
+  .carousel-indicators {
+    bottom: 10px;
+    z-index: 20;
+    justify-content: left;
+    padding-left: 0;
+    margin-right: 0;
+    margin-left: 1%;
+}
+
+.carousel-caption{
+    bottom: 200px;
+    z-index: 50;
+    h3{
+        font-size: 64px;
+    }
+
+}
+
+  .fp-tableCell{
+    display: block !important;
+}
+
+body{
+    // background-image: url('src/assets/images/art-2.svg');
+}
+
+.shadow-overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+    z-index: 10;
+    background: transparent url('src/assets/images/819.png') repeat top left;
+/* IE6-9 */
+}
+
+
+h3 {
+    font-size: 20px;
+    margin-top: 30px;
+    color: #f39016;
+}
+h4{
+  font-size: 20px;
+  color: #333;
+  margin-top: 20px;
+}
+
+.h4 {
+    font-size: 16px;
+    font-weight: 700;
+    margin: 20px 0 0;
+    text-transform: capitalize;
+}
+
+p {
+    font-size: 15px;
+    line-height: 26px;
+}
+
+h2 {
+    color: #f39016;
+    font-size: 14px;
+    margin: 20px 0;
+}
+
+.scroll-content {
+    padding-left: 20px;
+    height: 60vh;
+
+}
+
+ul {
+    li {
+        position: relative;
+        .price {
+            position: absolute;
+            right: 30px;
+            font-weight: 700;
+            top: 0;
+
+            &:before{
+              content: '$';
+            }
+        }
+    }
+}
+
+.fp-slidesNav{
+  display: none
+}
+
+.btn{
+  box-shadow: none;
+  &.btn-download{
+    border: 1px solid #333;
+    color: #333;
+    margin-top: 20px;
+  }
+  &.btn-readmore{
+    border: 1px solid $orange;
+    color: $orange;
+    margin-top: 20px;
+    float: right;
+  }
+}
+.modal-content .close {
+  outline: none !important;
+}
+.modal-title{
+  margin-top: 0;
+}
+.modal-header{
+  border: none;
+  h4{
+    color: #fff;
+  }
+}
+h6{
+  font-size: 18px;
+  font-weight: 700;
+  color: $orange;
+}
+.modal-body{
+  h3{
+    margin-top: 0;
+  }
+}
+ul{
+  list-style-type: none;
+  li{
+    list-style-type: none;
+  }
+}
+
+.h5{
+  line-height: 36px;
+}
+
+.article{
+  padding: 30px 0;
+  clear: both;
+  .px-15{
+    padding: 0 15px;
+  }
+  #chefs-tasting{
+    padding: 15px 0;
+  }
+  #contact{
+    padding-bottom: 200px;
+  }
+}
