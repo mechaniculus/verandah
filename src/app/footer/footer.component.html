@@ -1,0 +1,79 @@
+<div class="footer">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-sm-8">
+        <address>
+          <i class="fas fa-map-marker-alt"></i> &nbsp; 3300 Kirby Drive, Suite 7A, Kirby Collection, Houston, TX 77098 &nbsp; |  &nbsp; <i class="fas fa-phone"></i> &nbsp;&nbsp;<a href="tel:+12815010258" class="telephone">(281) 501 0258</a> /  &nbsp;<a class="telephone" href="tel:+18328864291">(832) 886 4291</a>
+      </address>
+
+      </div>
+      <!-- <a (click)="open(content)"><i class="fas fa-parking" (click)="open(content)"></i> PARKING</a> -->
+      <div class="col-sm-4 text-right"> <a (click)="open(timings)" ><i class="fas fa-clock"></i> TIMINGS</a>      <a (click)="open(reservation)" #LoadReservation ><i class="far fa-calendar-check"></i> RESERVATIONS</a>  </div>
+    </div>
+  </div>
+</div>
+
+<ng-template #content let-modal>
+  <div class="modal-header">
+    <h4 class="modal-title" id="modal-basic-title">Parking Details</h4>
+    <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <div class="h5">
+        Guest could self park their cars or use the valet parking facility. <br /> <br />
+        Parking is complementary for two hours and we will validate the tickets
+      </div>
+  </div>
+</ng-template>
+
+
+<ng-template #timings let-modal>
+  <div class="modal-header">
+    <h4 class="modal-title" id="modal-basic-title">Timings</h4>
+    <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <div class="h5">
+      Brunch / Lunch (Daily) – 11 am – 2:30 pm <br />
+       Dinner (Daily) – 5 pm – 10 pm<br />
+       Friday's & Saturday’s open till 11 pm<br />
+       Sundays open till 9 pm<br />
+       Happy Hours from 5 – 7 pm (daily)<br />
+    </div>
+    <h4>Monday Closed</h4>
+  </div>
+</ng-template>
+
+
+<ng-template #reservation let-modal>
+  <div class="modal-header">
+    <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <div class="body text-center">
+       <p>Welcome to</p>
+      <h3>Verandah</h3>
+      <p><b>Progressive Indian Cuisine</b></p>
+      <p class="mt-2">Kirby Collection, 3300 Kirby Drive, Suite 7A, Houston, TX 77098</p>
+
+      <h3 class="mt-5"> For Reservations</h3>
+        <p class="h5 mt-2">
+          Please call:  <a href="tel:+12815010258" class="telephone">(281) 501 0258</a> /  &nbsp;<a class="telephone" href="tel:+18328864291">(832) 886 4291</a>
+        </p>
+        <p class="h5 mt-2">
+        or go to <a href="https://www.exploretock.com/verandah" target="_blank">ExploreTock.com</a>
+        </p>
+
+        <div class="mt-5">
+        Valet parking and Self-parking available. Parking is complementary for two hours and we will validate the tickets.
+        </div>
+
+    </div>
+  </div>
+</ng-template>

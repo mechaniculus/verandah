@@ -1,0 +1,99 @@
+<!-- https://codepen.io/breadz/pen/zrMRoo -->
+<header id="header" [ngClass]="{'headerBg': showHeader}">
+  <div class="row">
+    <div class="col">
+      <nav class="nav">
+        <button class="toggle-menu">
+          <span></span>
+        </button>
+        <img class="logo" src="\assets\images\logo.png" />
+      </nav>
+    </div>
+  </div>
+</header>
+
+<div id="menu">
+  <nav class="main-nav">
+    <ul>
+      <li (click)="selectedItem = 0">
+        <a>Verandah</a>
+        <ul [ngbCollapse]="selectedItem != 0">
+          <li (click)="routeTo(3,0,'founder1')"><a class='toggle-menu'>* Our Story </a></li>
+          <!-- <li (click)="routeTo(3,1,'founder2')"><a class='toggle-menu'>Founder 2</a></li>
+          <li (click)="routeTo(3,2,'team')"><a class='toggle-menu'>Team</a></li> -->
+        </ul>
+      </li>
+      <li (click)="selectedItem = 1">
+        <a>Menu</a>
+        <ul [ngbCollapse]="selectedItem != 1">
+          <li (click)="routeTo(4,0,'brunch')"><a class='toggle-menu'>* Brunch</a></li>
+          <li (click)="routeTo(4,1,'lunch')"><a class='toggle-menu'>* Lunch</a></li>
+          <li (click)="routeTo(4,2,'dinner')"><a class='toggle-menu'>* Dinner</a></li>
+          <li (click)="routeTo(4,3,'cocktails')"><a class='toggle-menu'>* Cocktails &amp; Liquor</a></li>
+          <li (click)="routeTo(4,4,'wine')"><a class='toggle-menu'>* Wine & Sparkling</a></li>
+          <li (click)="routeTo(4,5,'chefs-tasting')"><a class='toggle-menu'>* Chef's Tasting</a></li>
+          <li (click)="routeTo(4,6,'verandah-tasting')"><a class='toggle-menu'>* Verandah Tasting </a></li>
+          <li (click)="routeTo(4,7,'veg-tasting')"><a class='toggle-menu'>* Vegetarian Tasting  </a></li>
+          <!-- <li (click)="routeTo(4,8,'mothersday-tasting')"><a class='toggle-menu'>* Mother's Day Tasting  </a></li> -->
+        </ul>
+      </li>
+      <!-- <li (click)="selectedItem = 2">
+        <a>
+          Private Dining
+        </a>
+        <ul [ngbCollapse]="selectedItem != 2">
+          <li (click)="routeTo(5,0,'location')"><a class='toggle-menu'>Location</a></li>
+          <li (click)="routeTo(5,1,'privateDining')"><a class='toggle-menu'>Private Dining</a></li>
+          <li (click)="routeTo(5,2,'enquiry')"><a class='toggle-menu'>Enquiry</a></li>
+        </ul>
+      </li>
+      <li (click)="selectedItem = 3">
+        <a>
+          Reservations
+        </a>
+        <ul [ngbCollapse]="selectedItem != 3">
+          <li (click)="routeTo(6,0,'reservations')"><a class='toggle-menu'>Make A Reservation</a></li>
+          <li (click)="routeTo(6,1,'hoursInformation')"><a class='toggle-menu'>Hours & Information</a></li>
+        </ul>
+      </li> -->
+      <li (click)="selectedItem = 2">
+        <a>
+          Events
+        </a>
+        <ul [ngbCollapse]="selectedItem != 2">
+          <li (click)="routeTo(5,0,'catering')"><a class='toggle-menu'>* Catering</a></li>
+          <li (click)="routeTo(5,1,'atVerandah')"><a class='toggle-menu'>* At Verandah</a></li>
+          <li (click)="routeTo(5,2,'gallery')"><a class='toggle-menu'>* Gallery</a></li>
+        </ul>
+      </li>
+      <li (click)="selectedItem = 3">
+        <a>
+          Media
+        </a>
+        <ul [ngbCollapse]="selectedItem != 3">
+          <li (click)="routeTo(6,0,'pressRelease')"><a class='toggle-menu'>* Verandah Press Release Links</a></li>
+          <li (click)="routeTo(6,1,'pressArchives')"><a class='toggle-menu'>* Wkana Press Archives</a></li>
+          <li (click)="routeTo(6,2,'mediaContact')"><a class='toggle-menu'>* Media Contact</a></li>
+        </ul>
+      </li>
+      <li (click)="selectedItem = 4">
+        <a>
+          Careers
+        </a>
+        <ul [ngbCollapse]="selectedItem != 4">
+          <li (click)="routeTo(7,0,'careers')"><a class='toggle-menu'>* Join Us</a></li>
+          <!-- <li (click)="routeTo(9,1,'books')"><a class='toggle-menu'>Books</a></li> -->
+        </ul>
+      </li>
+      <li (click)="selectedItem = 5">
+        <a>
+          Get in Touch
+        </a>
+        <ul [ngbCollapse]="selectedItem != 5">
+          <li (click)="routeTo(8,0,'contact')"><a class='toggle-menu'>* Contact Us</a></li>
+          <!-- <li (click)="routeTo(9,1,'books')"><a class='toggle-menu'>Books</a></li> -->
+        </ul>
+      </li>
+    </ul>
+  </nav>
+</div>

@@ -1,0 +1,35 @@
+<div class="home-container">
+  <div class='content'>
+    <div class="row">
+      <div class=" col-md-6 col-lg-6 col-xl-6 col-sm-12 col-xs-12 mt-md-5">
+        <div class="mx-auto mx-sm-0 mx-xs-0 p-md-5 mt-md-5">
+          <ngx-tabset (onSelect)="onTabClick($event)">
+            <ngx-tab [active]="currentIndex === 0 || currentIndex === -1" tabTitle="Careers">
+              <div class="scroll-content">
+              <p class="mt-5">
+                We are constantly looking for good talent. If you feel you have it in you, connect with us.
+                </p>
+              <h4>Reach us at: </h4>
+              <p>
+                3300 Kirby Drive, Suite 7A, <br />
+              Kirby Collections, Houston, TX 77098
+                </p>
+              <p>
+                T: <a href="callto:+18328864291"> (832) 886 4291 </a>
+                </p>
+              <p>
+                Email your CV to  <a href="mailto:wkanacafe@gmail.com">wkanacafe@gmail.com</a>
+                </p>
+                </div>
+            </ngx-tab>
+          </ngx-tabset>
+        </div>
+      </div>
+      <div class="col-right col-md-6 col-sm-12 col-xs-12">
+        <div class="slide">
+          <div class="slide-figure" style="background:url('../../assets/images/careers.jpg')"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

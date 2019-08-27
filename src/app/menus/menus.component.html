@@ -1,0 +1,180 @@
+<div class="home-container">
+  <div class="content">
+    <div class="row mob-row">
+      <div class="col-left col-md-6 col-lg-6 col-xl-6 col-sm-12 col-xs-12 mt-md-5">
+        <div class="mx-auto mx-sm-0 mx-xs-0 p-md-5">
+          <ngx-tabset (onSelect)="onTabClick($event)">
+
+            <ngx-tab [active]="currentIndex === 0 || currentIndex === -1" tabTitle="BRUNCH">
+              <app-brunch></app-brunch>
+            </ngx-tab>
+
+            <ngx-tab [active]="currentIndex === 1" tabTitle="LUNCH">
+              <app-lunch></app-lunch>
+            </ngx-tab>
+
+            <ngx-tab [active]="currentIndex === 2" tabTitle="DINNER">
+              <app-dinner></app-dinner>
+            </ngx-tab>
+
+            <ngx-tab [active]="currentIndex === 3" tabTitle="Cocktails &amp; Liquor">
+              <app-cocktails></app-cocktails>
+            </ngx-tab>
+
+            <ngx-tab [active]="currentIndex === 4" tabTitle="WINE &amp; Sparkling">
+              <app-wine></app-wine>
+            </ngx-tab>
+
+            <ngx-tab [active]="currentIndex === 5" tabTitle="Chef's Tasting">
+              <app-chef-tasting></app-chef-tasting>
+            </ngx-tab>
+
+            <ngx-tab [active]="currentIndex === 6" tabTitle="Verandah Tasting">
+              <app-verandah-tasting></app-verandah-tasting>
+            </ngx-tab>
+
+            <ngx-tab [active]="currentIndex === 7" tabTitle="Vegetarian Tasting">
+              <app-veg-tasting></app-veg-tasting>
+            </ngx-tab>
+
+            <!-- <ngx-tab [active]="currentIndex === 8" tabTitle="Mother's day Tasting">
+              <app-mothers-day></app-mothers-day>
+            </ngx-tab> -->
+
+          </ngx-tabset>
+        </div>
+      </div>
+      <div class="col-right col-md-6 col-sm-12 col-xs-12">
+        <div class="">
+          <ngb-carousel [showNavigationIndicators]="showNavigationIndicators">
+            <ng-template ngbSlide>
+              <div class="slide-figure" style="background:url('../../assets/images/food/1.jpg')"></div>
+            </ng-template>
+            <ng-template ngbSlide>
+              <div class="slide-figure" style="background:url('../../assets/images/food/2.jpg')"></div>
+            </ng-template>
+            <ng-template ngbSlide>
+              <div class="slide-figure" style="background:url('../../assets/images/food/3.jpg')"></div>
+            </ng-template>
+          </ngb-carousel>
+        </div>
+        <div class="">
+          <ngb-carousel [showNavigationIndicators]="showNavigationIndicators">
+            <ng-template ngbSlide>
+              <div class="slide-figure" style="background:url('../../assets/images/food/4.jpg')"></div>
+            </ng-template>
+            <ng-template ngbSlide>
+              <div class="slide-figure" style="background:url('../../assets/images/food/5.jpg')"></div>
+            </ng-template>
+            <ng-template ngbSlide>
+              <div class="slide-figure" style="background:url('../../assets/images/food/6.jpg')"></div>
+            </ng-template>
+          </ngb-carousel>
+        </div>
+
+
+        <div class="">
+          <ngb-carousel [showNavigationIndicators]="showNavigationIndicators">
+            <ng-template ngbSlide>
+              <div class="slide-figure" style="background:url('../../assets/images/food/12.jpg')"></div>
+            </ng-template>
+            <ng-template ngbSlide>
+              <div class="slide-figure" style="background:url('../../assets/images/food/17.jpg')"></div>
+            </ng-template>
+            <ng-template ngbSlide>
+              <div class="slide-figure" style="background:url('../../assets/images/food/18.jpg')"></div>
+            </ng-template>
+          </ngb-carousel>
+        </div>
+
+        <div class="">
+          <ngb-carousel [showNavigationIndicators]="showNavigationIndicators">
+            <ng-template ngbSlide>
+              <div class="slide-figure" style="background:url('../../assets/images/wine/wine.jpg')"></div>
+            </ng-template>
+            <ng-template ngbSlide>
+              <div class="slide-figure" style="background:url('../../assets/images/wine/wine2.jpg')"></div>
+            </ng-template>
+            <ng-template ngbSlide>
+              <div class="slide-figure" style="background:url('../../assets/images/wine/wine3.jpg')"></div>
+            </ng-template>
+          </ngb-carousel>
+        </div>
+
+        <div class="">
+          <ngb-carousel [showNavigationIndicators]="showNavigationIndicators">
+            <ng-template ngbSlide>
+              <div class="slide-figure" style="background:url('../../assets/images/wine/wine4.jpg')"></div>
+            </ng-template>
+            <ng-template ngbSlide>
+              <div class="slide-figure" style="background:url('../../assets/images/wine/wine5.jpg')"></div>
+            </ng-template>
+            <ng-template ngbSlide>
+              <div class="slide-figure" style="background:url('../../assets/images/wine/wine6.jpg')"></div>
+            </ng-template>
+          </ngb-carousel>
+        </div>
+
+        <div class="">
+          <ngb-carousel [showNavigationIndicators]="showNavigationIndicators">
+            <ng-template ngbSlide>
+              <div class="slide-figure" style="background:url('../../assets/images/food/11.jpg')"></div>
+            </ng-template>
+            <ng-template ngbSlide>
+              <div class="slide-figure" style="background:url('../../assets/images/food/12.jpg')"></div>
+            </ng-template>
+            <ng-template ngbSlide>
+              <div class="slide-figure" style="background:url('../../assets/images/food/13.jpg')"></div>
+            </ng-template>
+          </ngb-carousel>
+        </div>
+
+
+        <div class="">
+          <ngb-carousel [showNavigationIndicators]="showNavigationIndicators">
+            <ng-template ngbSlide>
+              <div class="slide-figure" style="background:url('../../assets/images/20.jpg')"></div>
+            </ng-template>
+            <ng-template ngbSlide>
+              <div class="slide-figure" style="background:url('../../assets/images/21.jpg')"></div>
+            </ng-template>
+            <ng-template ngbSlide>
+              <div class="slide-figure" style="background:url('../../assets/images/22.jpg')"></div>
+            </ng-template>
+          </ngb-carousel>
+        </div>
+
+
+        <div class="">
+          <ngb-carousel [showNavigationIndicators]="showNavigationIndicators">
+            <ng-template ngbSlide>
+              <div class="slide-figure" style="background:url('../../assets/images/veg-1.jpg')"></div>
+            </ng-template>
+            <ng-template ngbSlide>
+              <div class="slide-figure" style="background:url('../../assets/images/veg-2.jpg')"></div>
+            </ng-template>
+            <ng-template ngbSlide>
+              <div class="slide-figure" style="background:url('../../assets/images/veg-3.jpg')"></div>
+            </ng-template>
+          </ngb-carousel>
+        </div>
+
+        <div class="">
+          <ngb-carousel [showNavigationIndicators]="showNavigationIndicators">
+            <ng-template ngbSlide>
+              <div class="slide-figure" style="background:url('../../assets/images/8.jpg')"></div>
+            </ng-template>
+            <ng-template ngbSlide>
+              <div class="slide-figure" style="background:url('../../assets/images/9.jpg')"></div>
+            </ng-template>
+            <ng-template ngbSlide>
+              <div class="slide-figure" style="background:url('../../assets/images/10.jpg')"></div>
+            </ng-template>
+          </ngb-carousel>
+        </div>
+
+
+      </div>
+    </div>
+  </div>
+</div>

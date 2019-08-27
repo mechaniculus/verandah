@@ -1,0 +1,43 @@
+<div class="home-container">
+  <div class="content">
+    <div class="row">
+      <div class="col-md-6 col-lg-6 col-xl-6 col-sm-12 col-xs-12 mt-md-5">
+        <div class="mx-auto mx-sm-0 mx-xs-0 p-md-5 mt-md-5">
+          <ngx-tabset (onSelect)="onTabClick($event)">
+            <ngx-tab [active]="currentIndex === 0 || currentIndex === -1" tabTitle="CATERING">
+                <app-events-content></app-events-content>
+            </ngx-tab>
+            <ngx-tab [active]="currentIndex === 1" tabTitle="AT VERANDAH">
+              <app-atverandah></app-atverandah>
+
+            </ngx-tab>
+            <ngx-tab [active]="currentIndex === 2" tabTitle="GALLERY">
+              <h3>Coming Soon</h3>
+            </ngx-tab>
+          </ngx-tabset>
+        </div>
+      </div>
+      <div class="col-right col-md-6 col-sm-12 col-xs-12">
+        <div class="">
+          <ngb-carousel [showNavigationIndicators]="showNavigationIndicators">
+            <ng-template ngbSlide>
+              <div class="slide-figure" style="background:url('../../assets/images/food/1.jpg')"></div>
+            </ng-template>
+            <ng-template ngbSlide>
+              <div class="slide-figure" style="background:url('../../assets/images/food/2.jpg')"></div>
+            </ng-template>
+            <ng-template ngbSlide>
+              <div class="slide-figure" style="background:url('../../assets/images/food/3.jpg')"></div>
+            </ng-template>
+          </ngb-carousel>
+        </div>
+        <div class="slide">
+          <div class="slide-figure" style="background:url('../../assets/images/19.jpg')"></div>
+        </div>
+        <div class="slide">
+          <div class="slide-figure" style="background:url('../../assets/images/food/events-bg.jpg')"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,97 @@
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+    #header {
+        position: fixed !important;
+        background-color: rgba(27, 25, 23, 0.811) !important;
+        padding: 1.2rem;
+        height: 60px;
+        width: 100%;
+    }
+    .headerBg .logo {
+        width: 80px !important;
+    }
+    .about-page {
+        margin-top: 280px;
+        h4 {
+            font-size: 20px !important;
+            color: #f39016 !important;
+            letter-spacing: 1px !important;
+            text-align: center;
+            padding: 10px;
+        }
+        p {
+            padding: 10px;
+            font-size: 15px !important;
+            line-height: 26px !important;
+            margin-bottom: 5px !important;
+            color: #000 !important;
+            background-color: rgba($color: #ffffff, $alpha: 0.5) !important;
+        }
+    }
+    .scroll-content {
+        height: 100% !important;
+    }
+
+    h5{
+      font-size: 36px;
+      color: $orange;
+      letter-spacing: 1px;
+      margin-left: 0;
+      margin-bottom: 0;
+      background: #f5f5f5;
+      padding-left: 25px !important;
+      padding-top:75px !important;
+    }
+}
+
+
+@media only screen and (min-device-width: 481px) and (max-device-width: 991.98px) {
+    #header {
+        position: fixed !important;
+        background-color: rgba(27, 25, 23, 0.811) !important;
+        padding: 1.2rem;
+        height: 60px;
+        width: 100%;
+    }
+    .headerBg .logo {
+        width: 80px !important;
+    }
+    .about-page {
+        margin-top: 480px;
+        h4 {
+            font-size: 20px !important;
+            color: #f39016 !important;
+            letter-spacing: 1px !important;
+            text-align: center;
+            padding: 10px;
+        }
+        p {
+            padding: 10px;
+            font-size: 16px !important;
+            line-height: 26px !important;
+            margin-bottom: 5px !important;
+            color: #000 !important;
+            background-color: rgba($color: #ffffff, $alpha: 0.5) !important;
+        }
+    }
+    .scroll-content {
+        height: 100% !important;
+    }
+
+    h5{
+      font-size: 36px;
+      color: $orange;
+      letter-spacing: 1px;
+      margin-left: 0;
+      margin-bottom: 0;
+      background: #f5f5f5;
+      padding-left: 25px !important;
+      padding-top:75px !important;
+    }
+}
+
+
+@media only screen and (min-device-width: 992px) and (max-device-width: 1800px) {
+    .body {
+        height: 100% !important;
+    }
+}

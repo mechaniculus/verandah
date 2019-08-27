@@ -1,0 +1,155 @@
+// Some base styles
+@import "../styles/variables.scss";
+body {
+    font-family: $font-light;
+}
+
+#header {
+    padding: 2rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    height: 80px;
+    background-color: rgba(27, 25, 23, 0.411);
+    width: 100%;
+    .logo {
+        height: 50px;
+        position: absolute;
+        top: -20px;
+        right: 20px;
+    } // Hamburger menu toggler stuff below
+    .toggle-menu {
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+        display: inline-block;
+        float: left;
+        height: $hamburger-height;
+        outline: none;
+        padding: 0;
+        pointer-events: initial;
+        position: relative;
+        vertical-align: middle;
+        width: $hamburger-width;
+        z-index: $hamburger-zindex;
+        span {
+            background-color: $hamburger-color;
+            content: "";
+            display: block;
+            height: 2px;
+            left: calc(50% - 13px);
+            position: absolute;
+            top: calc(50% - 1px);
+            transform-origin: 50% 50%;
+            transition: background-color 0.2s ease-in-out, top 0.2s 0.2s ease-out, transform 0.2s linear;
+            width: 26px;
+            &:before,
+            &:after {
+                background-color: $hamburger-color;
+                content: "";
+                display: block;
+                height: 2px;
+                position: absolute;
+                transform-origin: 50% 50%;
+                transition: background-color 0.2s ease-in-out, top 0.2s 0.2s ease-out, transform 0.2s linear;
+                width: 26px;
+            }
+            &:before {
+                top: 7px;
+            }
+            &:after {
+                top: -7px;
+            }
+        }
+        &.active {
+            span {
+                background-color: transparent;
+                transition: background 0.2s ease-out;
+                &:before,
+                &:after {
+                    transition: top 0.2s ease-out, transform 0.2s 0.2s ease-out;
+                }
+                &:before {
+                    top: 0;
+                    transform: rotate3d(0, 0, 1, -45deg);
+                }
+                &:after {
+                    top: 0;
+                    transform: rotate3d(0, 0, 1, 45deg);
+                }
+            }
+        }
+    }
+}
+
+#menu {
+    background-color: rgba(0,0,0,0.5);
+    background-image: url('../src/assets/images/menubg.jpg');
+    height: 100%;
+    left: 0;
+    opacity: 0;
+    overflow: hidden;
+    position: fixed;
+    text-align: left;
+    top: 0;
+    transition: all 0.7s ease-in-out; // For some sweet fadez
+    visibility: hidden;
+    width: 100%;
+    z-index: $menu-zindex;
+    &.open {
+        opacity: 1;
+        visibility: visible;
+        @for $i from 1 through 10 {
+            li:nth-child(#{$i}) {
+                animation-delay: $i*0.1s;
+            }
+        }
+        li {
+            animation-duration: 1.0s;
+            animation-fill-mode: both;
+            animation-name: fadeInUp;
+        }
+    }
+    ul {
+        &:hover {
+            a {
+                opacity: 0.2;
+            }
+        }
+        a {
+            // Stops it being a twitchy mess in chrome :pray:
+            // https://www.binarymoon.co.uk/2014/02/fixing-css-transitions-in-google-chrome/
+            -webkit-transform: translateZ(0);
+            transition: opacity 0.3s ease-in-out;
+            font-family: $font-light;
+            &:hover {
+                opacity: 1;
+            }
+        }
+    }
+    .main-nav {
+        position: relative;
+        top: 40%;
+        left: 0;
+        transform: translateY(-50%);
+        ul {
+            list-style: none;
+            margin: 0;
+            padding: 0 0 0 100px;
+        }
+        a {
+            color: $menu-color;
+            display: block;
+            font-size: 22px;
+            font-weight: 100;
+            padding: 0.25rem 0.25rem;
+            text-decoration: none;
+            text-transform: capitalize;
+            font-family: $font-light;
+            &:first {
+                padding-top: 0;
+            }
+        }
+    }
+}

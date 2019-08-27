@@ -1,0 +1,85 @@
+<app-sidenav [(currentIndex)]="currentIndex" [showHeader]="showHeader" (moveToIndex)="onMoveToIndex($event)"></app-sidenav>
+
+<app-mobile-view *showItBootstrap="['xs','sm']"></app-mobile-view>
+
+<div *showItBootstrap="['md','lg','xl']" id="fullpage" mnFullpage [mnFullpageNavigation]="false"
+    [mnFullpageKeyboardScrolling]="true" [mnFullpageSlidesNavigation]="true" [mnFullpageControlArrows]="false"
+    [mnFullpageSlidesNavPosition]="bottom" [mnFullpageOnLeave]="onLeaveHandler">
+    <div data-anchor="section" class="section home-section fp-section fp-table">
+        <div class="fp-tableCell">
+            <app-home></app-home>
+        </div>
+    </div>
+    <div data-anchor="section" class="section2 about-section fp-section fp-table">
+        <div class="fp-tableCell">
+            <app-about></app-about>
+        </div>
+    </div>
+    <div data-anchor="section" class="section2 about2-section fp-section fp-table">
+        <div class="home-container">
+            <div class="content">
+                <div class="row mob-row">
+                    <div class="col-left col-md-6 col-lg-6 col-xl-6 col-sm-12 col-xs-12 mt-md-3">
+                        <div class="mx-auto mx-sm-0 mx-xs-0 p-md-5 mt-md-3">
+                            <ngx-tabset (onSelect)="onTabClick($event)">
+                                <ngx-tab [active]="currentIndex === 0 || currentIndex === -1" tabTitle="Our Story" class="tabTitle">
+                                    <app-founder></app-founder>
+                                </ngx-tab>
+                            </ngx-tabset>
+                        </div>
+                    </div>
+                    <div class="col-md-6 carousel-height">
+                        <div class="slide slide-figure" style="background:url('../../assets/images/founders.jpg')">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div data-anchor="section" class="section3 menus-section fp-section fp-table">
+        <div class="fp-tableCell">
+            <app-menus [(currentIndex)]="currentIndex"></app-menus>
+        </div>
+    </div>
+    <!-- <div data-anchor="section" class="section4 private-dining-section fp-section fp-table">
+        <div class="fp-tableCell">
+            <app-private-dining [(currentIndex)]="currentIndex"></app-private-dining>
+        </div>
+    </div>
+    <div data-anchor="section" class="section5 reservations-section fp-section fp-table">
+        <div class="fp-tableCell">
+            <app-reservations [(currentIndex)]="currentIndex"></app-reservations>
+        </div>
+    </div>
+    <div data-anchor="section" class="section6 partners-section fp-section fp-table">
+        <div class="fp-tableCell">
+            <app-partners [(currentIndex)]="currentIndex"></app-partners>
+        </div>
+    </div> -->
+    <div data-anchor="section" class="section6 events-section fp-section fp-table">
+        <div class="fp-tableCell">
+            <app-events [(currentIndex)]="currentIndex"></app-events>
+        </div>
+    </div>
+
+    <div data-anchor="section" class="section7 events-section fp-section fp-table">
+        <div class="fp-tableCell">
+            <app-media [(currentIndex)]="currentIndex"></app-media>
+        </div>
+    </div>
+
+    <div data-anchor="section" class="section8 careers-section fp-section fp-table ">
+        <div class="fp-tableCell">
+            <app-careers></app-careers>
+        </div>
+    </div>
+
+    <div data-anchor="section" class="section8 contact-section fp-section fp-table ">
+        <div class="fp-tableCell">
+            <app-contact [(currentIndex)]="currentIndex"></app-contact>
+        </div>
+    </div>
+
+</div>
+
+<app-footer></app-footer>

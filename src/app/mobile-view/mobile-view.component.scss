@@ -1,0 +1,39 @@
+.home-page {
+    margin-top: 56px;
+}
+
+.about-page {
+    $orange: #f39016;
+    .home-container {
+        overflow: hidden;
+        text-align: center;
+        background-image: url("src/assets/images/pattern.png");
+        .about {
+            padding-top: 10%;
+            h4 {
+                font-size: 20px;
+                color: $orange;
+                letter-spacing: 2px;
+            }
+            p {
+                font-size: 14px;
+                line-height: 30px;
+                margin-bottom: 60px;
+            }
+            .small-sep {
+                width: 100px;
+                height: 2px;
+                margin: 10px auto 20px;
+                background-color: $orange;
+            }
+        }
+    }
+    .team-page {
+        .founder1-content {
+            padding: 10px;
+        }
+        .founder2-content {
+            padding: 10px;
+        }
+    }
+}

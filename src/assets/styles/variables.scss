@@ -1,0 +1,17 @@
+$get-path-to-assets: "assets/fonts";
+$menu-bg: rgb(7, 7, 7);
+$menu-color: #ffffff;
+$menu-font-size: 1.5rem;
+$menu-zindex: 1100;
+$hamburger-color: rgb(230, 227, 227);
+$hamburger-width: 10px;
+$hamburger-height: 20px;
+$hamburger-zindex: $menu-zindex+10;
+$font-normal: 'Source Sans Pro',
+sans-serif;
+$font-light: HelveticaFontLight;
+$font-bold: 'Playfair Display',
+serif;
+$active-tab-color: rgba(0, 0, 0, .7);
+$nav-tab-padding: 20px !important;
+$orange: #f39016;
